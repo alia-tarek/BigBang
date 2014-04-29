@@ -1,0 +1,18 @@
+<h1> Services </h1>
+
+<script type="text/javascript">
+
+var alia = [<%= raw @services.to_json %>];
+
+
+
+function show_array(array) {
+	for(var i=0; i<alia.length; i++) {
+		document.write(alia[i]);
+		document.write('<br/>');
+	}
+}
+
+</script> 
+
+

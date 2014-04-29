@@ -1,0 +1,28 @@
+<%- form_for user, :remote => true, :html => { :id => "new_user" } do |f| %>
+  <div class="fields">
+    
+    <% unless user.errors.empty? %>
+      <ul class="errors">
+        <% user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :surname %><br />
+      <%= f.text_field :surname %>
+    </p>
+    <p>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+  </div>
+  <div class="buttons">
+    <%= f.submit "Create it!" %>
+  </div>
+<%- end %>

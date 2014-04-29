@@ -1,0 +1,2 @@
+lass FilesController < ApplicationController
+end
